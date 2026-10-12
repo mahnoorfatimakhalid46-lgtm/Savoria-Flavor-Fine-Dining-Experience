@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Savoria — a modern restaurant experience with handcrafted dishes and easy table reservations.">
+  <title>Savoria | Modern Restaurant & Dining</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">S</span><span>SAVORIA<small>MODERN DINING</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a>
+      <a class="nav-cta" href="#reservation">Reserve a Table</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A LITTLE TASTE OF SOMETHING SPECIAL</p>
+        <h1>Good food.<br><em>Beautiful moments.</em></h1>
+        <p class="hero-copy">Seasonal ingredients, thoughtful cooking, and a warm table waiting just for you.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#menu">Explore the Menu</a><a class="button button-outline" href="#reservation">Book Your Table</a></div>
+      </div>
+      <div class="hero-note"><span>✦</span> Fresh ingredients · Made with love</div>
+    </section>
+
+    <section class="intro section" id="story">
+      <div class="intro-image"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Elegant restaurant table setting"></div>
+      <div class="intro-copy"><p class="eyebrow">WELCOME TO SAVORIA</p><h2>Where every meal<br>feels like <em>an occasion.</em></h2>
+        <p>We believe dining is more than what’s on the plate. It’s the people around the table, the details you notice, and the flavors you remember.</p>
+        <p>Our kitchen brings familiar favorites together with a fresh, seasonal point of view.</p>
+        <a class="text-link" href="#reservation">Come dine with us <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-heading"><p class="eyebrow">MADE FRESH, SERVED WITH HEART</p><h2>Guest <em>favorites</em></h2><p>Something delicious for every kind of craving.</p></div>
+      <div class="menu-grid">
+        <article class="dish"><img src="https://images.unsplash.com/photo- pasta-?auto=format&fit=crop&w=800&q=80" alt="Pasta dish" onerror="this.src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85'"><div class="dish-body"><div class="dish-title"><h3>Truffle Cream Pasta</h3><strong>$18</strong></div><p>Silky parmesan cream, wild mushrooms, fresh herbs.</p><button class="add-btn" data-name="Truffle Cream Pasta" data-price="18">Add to Order +</button></div></article>
+        <article class="dish"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85" alt="Gourmet burger"><div class="dish-body"><div class="dish-title"><h3>Savoria House Burger</h3><strong>$16</strong></div><p>Grilled beef, aged cheddar, house sauce, brioche bun.</p><button class="add-btn" data-name="Savoria House Burger" data-price="16">Add to Order +</button></div></article>
+        <article class="dish"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=85" alt="Fresh garden salad"><div class="dish-body"><div class="dish-title"><h3>Garden Harvest Bowl</h3><strong>$13</strong></div><p>Crunchy greens, seasonal vegetables, citrus dressing.</p><button class="add-btn" data-name="Garden Harvest Bowl" data-price="13">Add to Order +</button></div></article>
+      </div>
+      <div class="order-panel" id="orderPanel" hidden><div><h3>Your order</h3><ul id="orderItems"></ul><p class="total">Total: <strong id="orderTotal">$0</strong></p></div><button class="button button-dark" id="clearOrder">Clear order</button></div>
+    </section>
+
+    <section class="quote-band" id="gallery"><p>“The best memories are made around the table.”</p><span>— THE SAVORIA PHILOSOPHY —</span></section>
+
+    <section class="reservation section" id="reservation">
+      <div class="reservation-copy"><p class="eyebrow">YOUR TABLE IS WAITING</p><h2>Make it a <em>moment.</em></h2><p>Planning a date night, a family dinner, or simply a good meal? We’ll save you a seat.</p><div class="reservation-detail"><span>✦</span><div><b>Thoughtful food</b><small>Seasonal menus made with care</small></div></div><div class="reservation-detail"><span>✦</span><div><b>Warm hospitality</b><small>Good times, no special occasion needed</small></div></div></div>
+      <form id="reservationForm" class="reservation-form">
+        <h3>Reserve your table</h3><p>Fill in your details and we’ll be in touch.</p>
+        <label for="name">Full name</label><input id="name" name="name" placeholder="Your name" required>
+        <div class="form-row"><div><label for="email">Email</label><input id="email" type="email" name="email" placeholder="you@example.com" required></div><div><label for="guests">Guests</label><select id="guests" name="guests"><option>1 person</option><option selected>2 people</option><option>3 people</option><option>4 people</option><option>5 people</option><option>6 people</option><option>7+ people</option></select></div></div>
+        <div class="form-row"><div><label for="date">Date</label><input id="date" type="date" name="date" required></div><div><label for="time">Time</label><select id="time" name="time" required><option value="">Choose a time</option><option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option><option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select></div></div>
+        <label for="notes">Special requests <span class="muted">(optional)</span></label><textarea id="notes" name="notes" rows="3" placeholder="Anything we should know?"></textarea>
+        <button class="button button-gold submit-btn" type="submit">Request Reservation ↗</button><p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span><span>SAVORIA<small>MODERN DINING</small></span></a><p>Good food. Beautiful moments.</p><small>© <span id="year"></span> Savoria. Made for memorable meals.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
